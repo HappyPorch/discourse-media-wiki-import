@@ -1,0 +1,13 @@
+en:
+  js:
+    media_wiki_import:
+      title: "MediaWiki Import"
+      uploader:
+        title: "Select file"
+        upload_progress: "Uploading..."
+      import: 
+        file_label: "Upload a MediaWiki export XML file containing the articles that should be imported:"
+        category_label: "Select the category to which the uploaded articles should be added:"
+        submit_label: "Import"
+        error_missing_export_file: "Upload an export XML file"
+        error_missing_category: "Select a category"

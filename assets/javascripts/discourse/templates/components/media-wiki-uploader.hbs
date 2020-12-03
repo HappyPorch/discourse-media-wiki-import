@@ -1,0 +1,11 @@
+<label class="btn" disabled={{uploading}} title="{{i18n 'media_wiki_import.uploader.title'}}">
+  {{d-icon "upload"}}
+  {{#if uploading}}
+    {{i18n "uploading"}} {{uploadProgress}}%
+  {{else}}
+    {{i18n "upload"}}
+  {{/if}}
+  <input id={{id}} class="hidden-upload-field" disabled={{uploading}} type="file" accept=".xml">
+</label>
+
+{{uploadedMediaWikiExportDisplayName}}

@@ -1,0 +1,48 @@
+<form class="media-wiki-import" {{action "dummy" on="submit"}}>
+  <div>
+    <label for="file">
+      {{i18n "media_wiki_import.import.file_label"}}
+    </label>
+    {{media-wiki-uploader 
+        id="file" 
+        uploadedMediaWikiExportUrl=uploadedMediaWikiExportUrl
+        uploadedMediaWikiExportId=uploadedMediaWikiExportId
+        done=(action "uploadComplete")
+      }}
+
+    {{#if errorMessageExportFile}}
+      <p class="error-description">{{errorMessageExportFile}}</p>
+    {{/if}}
+  </div>
+
+  <br />
+
+  <div>
+    <label for="category">
+      {{i18n "media_wiki_import.import.category_label"}}
+    </label>
+    {{category-chooser
+        id="category"
+        rootNone=true
+        value=categoryId
+        categories=parentCategories
+        allowSubCategories=true
+        allowUncategorized=false
+        onChange=(action (mut categoryId))
+      }}
+
+    {{#if errorMessageCategory}}
+      <p class="error-description">{{errorMessageCategory}}</p>
+    {{/if}}
+  </div>
+
+  <br />
+
+  <div>
+    {{d-button class="btn-primary" action=(action "import") type="submit" disabled=notReady label="media_wiki_import.import.submit_label"}}
+
+    {{#if successMessage}}
+      <p class="success-description">{{successMessage}}</p>
+    {{/if}}
+  </div>
+</form>
