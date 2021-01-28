@@ -11,3 +11,4 @@ en:
         submit_label: "Import"
         error_missing_export_file: "Upload an export XML file"
         error_missing_category: "Select a category"
+        importing_label: "Importing..."

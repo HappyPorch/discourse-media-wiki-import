@@ -39,7 +39,11 @@
   <br />
 
   <div>
-    {{d-button class="btn-primary" action=(action "import") type="submit" disabled=notReady label="media_wiki_import.import.submit_label"}}
+    {{d-button class="btn-primary" action=(action "import") type="submit" disabled=importing label="media_wiki_import.import.submit_label"}}
+
+    {{#if importing}}
+      <p class="progress-description">{{i18n "media_wiki_import.import.importing_label"}}</p>
+    {{/if}}
 
     {{#if successMessage}}
       <p class="success-description">{{successMessage}}</p>
