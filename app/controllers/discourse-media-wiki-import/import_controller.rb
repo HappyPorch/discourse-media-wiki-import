@@ -19,7 +19,7 @@ module DiscourseMediaWikiImport
       updated_pages = 0
       failed_pages = 0
 
-      mwns = 'http://www.mediawiki.org/xml/export-0.10/'
+      mwns = 'http://www.mediawiki.org/xml/export-0.11/'
 
       xml_doc = Nokogiri::XML(File.open(local_path))
 
