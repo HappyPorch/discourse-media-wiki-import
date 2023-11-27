@@ -170,6 +170,9 @@ module Jobs
                 # find topic URL in mapping
                 topic_url = wiki_page_topic_map[title]&.url
 
+                # fix any URLs without a topic title
+                topic_url.sub! '/t//' '/t/'
+
                 anchor['href'] = topic_url
             end
 
