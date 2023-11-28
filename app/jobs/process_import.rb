@@ -144,7 +144,7 @@ module Jobs
                 read_timeout: 30
             )
 
-            return nil if html_file.nil?
+            return '' if html_file.nil?
 
             html = html_file.read
             html_file.close
