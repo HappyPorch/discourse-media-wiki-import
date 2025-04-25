@@ -1,8 +1,8 @@
 import discourseComputed from "discourse-common/utils/decorators";
 import Component from "@ember/component";
-import UppyUploadMixin from "discourse/mixins/uppy-upload";
+import UppyUpload from "discourse/lib/uppy/uppy-upload";
 
-export default Component.extend(UppyUploadMixin, {
+export default Component.extend(UppyUpload, {
   type: "mediawiki-export",
   tagName: "span",
 

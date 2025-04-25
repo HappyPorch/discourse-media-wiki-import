@@ -1,6 +1,6 @@
 # name: discourse-media-wiki-import
 # about: Plugin that imports the articles from a MediaWiki export file as topics into a Discourse category. 
-# version: 0.4.5
+# version: 0.4.6
 # authors: HappyPorch
 # url: https://github.com/HappyPorch/discourse-media-wiki-import/
 
